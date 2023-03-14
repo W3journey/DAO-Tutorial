@@ -63,8 +63,8 @@ contract CryptoDevsDAO is Ownable {
 
     // Create an enum named Vote containing possible options for a vote
     enum Vote {
-        YAY, // YAY = 0
-        NAY // NAY = 1
+        YAY,
+        NAY
     }
 
     // Create a mapping of ID to Proposal

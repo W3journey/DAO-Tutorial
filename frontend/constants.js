@@ -1,13 +1,21 @@
 export const CRYPTODEVS_DAO_CONTRACT_ADDRESS =
-  "0xc79A13f784170CE6d554016Bd303273211aea52c";
+  "0x2d76cC64A655916C7f4dDAAB660858Aca493e7E5";
 export const CRYPTODEVS_NFT_CONTRACT_ADDRESS =
   "0x5DC40A275E13d6e494b5464a5A68B4da8CFAa5d6";
 
 export const CRYPTODEVS_DAO_ABI = [
   {
     inputs: [
-      { internalType: "address", name: "_nftMarketplace", type: "address" },
-      { internalType: "address", name: "_cryptoDevsNFT", type: "address" },
+      {
+        internalType: "address",
+        name: "_nftMarketplace",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "_cryptoDevsNFT",
+        type: "address",
+      },
     ],
     stateMutability: "payable",
     type: "constructor",
@@ -31,17 +39,36 @@ export const CRYPTODEVS_DAO_ABI = [
     name: "OwnershipTransferred",
     type: "event",
   },
-  { stateMutability: "payable", type: "fallback" },
   {
-    inputs: [{ internalType: "uint256", name: "_nftTokenId", type: "uint256" }],
+    stateMutability: "payable",
+    type: "fallback",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_nftTokenId",
+        type: "uint256",
+      },
+    ],
     name: "createProposal",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
     inputs: [
-      { internalType: "uint256", name: "proposalIndex", type: "uint256" },
+      {
+        internalType: "uint256",
+        name: "proposalIndex",
+        type: "uint256",
+      },
     ],
     name: "executeProposal",
     outputs: [],
@@ -51,26 +78,64 @@ export const CRYPTODEVS_DAO_ABI = [
   {
     inputs: [],
     name: "numProposals",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [],
     name: "owner",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     name: "proposals",
     outputs: [
-      { internalType: "uint256", name: "nftTokenId", type: "uint256" },
-      { internalType: "uint256", name: "deadline", type: "uint256" },
-      { internalType: "uint256", name: "yayVotes", type: "uint256" },
-      { internalType: "uint256", name: "nayVotes", type: "uint256" },
-      { internalType: "bool", name: "executed", type: "bool" },
+      {
+        internalType: "uint256",
+        name: "nftTokenId",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "deadline",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "yayVotes",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "nayVotes",
+        type: "uint256",
+      },
+      {
+        internalType: "bool",
+        name: "executed",
+        type: "bool",
+      },
     ],
     stateMutability: "view",
     type: "function",
@@ -83,7 +148,13 @@ export const CRYPTODEVS_DAO_ABI = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "newOwner", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
     name: "transferOwnership",
     outputs: [],
     stateMutability: "nonpayable",
@@ -91,8 +162,16 @@ export const CRYPTODEVS_DAO_ABI = [
   },
   {
     inputs: [
-      { internalType: "uint256", name: "proposalIndex", type: "uint256" },
-      { internalType: "enum CryptoDevsDAO.Vote", name: "vote", type: "uint8" },
+      {
+        internalType: "uint256",
+        name: "proposalIndex",
+        type: "uint256",
+      },
+      {
+        internalType: "enum CryptoDevsDAO.Vote",
+        name: "vote",
+        type: "uint8",
+      },
     ],
     name: "voteOnProposal",
     outputs: [],
@@ -106,7 +185,10 @@ export const CRYPTODEVS_DAO_ABI = [
     stateMutability: "nonpayable",
     type: "function",
   },
-  { stateMutability: "payable", type: "receive" },
+  {
+    stateMutability: "payable",
+    type: "receive",
+  },
 ];
 export const CRYPTODEVS_NFT_ABI = [
   {
